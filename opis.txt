@@ -1,0 +1,23 @@
+Projekt rozpoczęty w 03/2020 i niedokończony
+
+Strona ta to sklep z ubraniami różnego typu(koszule, spodnie itd.), dla kobiet i mężczyzn.
+Projekt obejmuje takie funkcjonalności(wszystkie zostały wykonane na podstawie bazy danych) jak:
+	- rejestracja i logowanie 
+		rejestracja: tabela users(najpierw sprawdzenie przez select czy użytkownik o danej nazwie/mailu istnieje, jeśli nie to insert into)
+		logowanie: w zależności czy loguje się zwykły użytkownik, bądź admin/moderator(pracownik) to operacje wykonywane są na innej tabeli
+			tabela users(dla użytkowników, select z bazy danych by sprawdzić czy dane podane przez użytkownika są zgodne)
+			tabela employee(dla pracowników, select jak wyżej)
+	- wyświetlenie produktów 
+		następuje przez wybranie wszystkich danych z tabeli products i połączenie jej z tabelą products_type(nazwa typu produktu koszulka itd.)		(select z left join)
+	- koszyk 
+		użytkownik może dodawać przedmioty(z tabeli products) do koszyka(user_cart) gdzie tworzy się relacja n-n na zasadzie:
+			users.id -> user_id w tabeli user_cart i product_id <- z products.id
+		także może zwiększać/zmniejszać ilość przedmiotów w koszyku, usunąć wszystkie itd.(wszystko na bazie danych)
+	- panel administracyjny 
+		- wyświetla 5 ostatnich utworzonych użytkowników/pracowników/przedmioty(select, ewt. select z left join i limit)
+		- po przejściu do dodawania przedmiotu/użytkownika wyświetla wszystkie dane z bazy(w zależności gdzie weszliśmy, czyli wszystkich 		  użytkowników, lub wszystkie przedmioty)
+		  (polecenia select)
+ 		- umożliwia dodawanie nowych użytkowników(tabela users)/pracowników(tabela employee) do bazy danych(działanie podobne jak wyżej w 		  rejestracji)
+		- umożliwia dodawanie nowych przedmiotów do bazy danych(tabela products)
+		- umożliwia edycje użytkowników/pracowników/przedmiotów(tabela users/employee/products) - polecenie update set
+		- umożliwia usuwanie użytkowników/pracowników/przedmiotów - polecenie delete
