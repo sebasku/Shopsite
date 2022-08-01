@@ -12,11 +12,11 @@ As an employee(access to whole admin panel):
 
 As a moderator(access to part of admin panel): 
 
-	Moderator can view/modify/create/delete only stuff that he has access to.
+	Moderator can view/modify/create/delete only stuff that he has access to(assigned to him or created by him).
 
 TODO: 
 
-	Functionality: user profiles finish ordering
+	Functionality: user profiles, finish ordering
 
 	Design: throw away media queries and implement bootstrap or something similar (earlier I used media queries simply to test how it works)
 
