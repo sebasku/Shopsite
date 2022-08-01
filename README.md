@@ -1,30 +1,25 @@
-# Shopsite
-Project not finished. 
-Currently:
+#Shopsite
 
-As a user:
-	can create account and login
-		add stuff to cart
+1/08/2022 I decided that I would rewrite this project using Java in a few weeks.
 
-As a employee(access to whole admin panel):
-	Employee has full access to admin panel(view/modify/create/delete user/product), but can't modify stuff that comes from other employee.
-  
-As a moderator(access to part of admin panel):
+The project is not finished. Currently:
+
+As a user: can create an account and log in to add stuff to the cart
+
+As an employee(access to whole admin panel): 
+
+	Employee has full access to the admin panel(view/modify/create/delete user/product), but can't modify stuff that comes from another employee.
+
+As a moderator(access to part of admin panel): 
+
 	Moderator can view/modify/create/delete only stuff that he has access to.
-  
-TODO:
-functionality:
-  user profiles
-  finish ordering
 
-design:
-  throw away mediaqueries and implement bootstrap or something similar
-  (earlier I used mediaqueries simply to test how it works)
+TODO: 
 
-code:
-  add comments
-  change "Item/s" to "Product/s" to match how it is in database
-  should rewrite whole code to OOP
+	Functionality: user profiles finish ordering
 
-1/08/2022
-I decided that in a few weeks I will rewrite this project using Java. 
+	Design: throw away media queries and implement bootstrap or something similar (earlier I used media queries simply to test how it works)
+
+	Code: add comments change "Item/s" to "Product/s" to match how it is in the database should rewrite the whole code to OOP
+
+
